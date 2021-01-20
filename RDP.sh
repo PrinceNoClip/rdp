@@ -1,6 +1,3 @@
-#! /bin/bash
-printf "Installing RDP Be Patience... " >&2
-{
 sudo useradd -m ALOK
 sudo adduser ALOK sudo
 echo 'ALOK:8426' | sudo chpasswd
@@ -23,7 +20,6 @@ sudo apt install tightvncserver
 tightvncserver :1
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
-} &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 if sudo apt-get upgrade &> /dev/null
 then
